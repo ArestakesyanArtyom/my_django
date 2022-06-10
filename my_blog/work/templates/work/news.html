@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/media/style.css">
+</head>
+<body>
+    <header class="blog_header">
+        <div class="blog_logo">
+          <a href="./index.html">
+            <img src="/media/images/Toyota.png" alt="blog">
+          </a>
+        </div>
+    
+        <nav class="blog_nav">
+          <ul class="blog_main_menu">
+            <li><a href="index.html">blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav> 
+    </header> 
+    <section>
+        <h1 class="h1">news</h1>
+        <div class="container">
+          {% for product in products %}
+          <div class="conteiner-cart">
+            <div class="cart">
+               <div class="cart-image">
+                  <a href="#"><img src="/media/images/{{product.image}}" alt="nkar"></a>
+               </div>
+              <div class="cart-body">
+                <h2>
+                  <a href="/product">{{product.name}}</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        
+    </section>
+
+
+    <footer>
+        <div class="copyright">
+          <span>blog &copy; 2022</span>
+        </div>
+</footer> 
+</body>
+</html>
